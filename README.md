@@ -1,1 +1,3 @@
-"# hack-gang" 
+# Hack Gang
+
+A React Native project.
