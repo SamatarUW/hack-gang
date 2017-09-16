@@ -2,4 +2,3 @@
 Humza
 Samatar 
 Lester
-GANG
