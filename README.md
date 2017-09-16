@@ -1,3 +1,5 @@
 # Hack Gang
 Humza
-A React Native project.
+Samatar 
+Lester
+GANG
