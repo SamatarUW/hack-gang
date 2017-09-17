@@ -1,21 +1,16 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { View } from 'react-native';
+import Header from './src/components/Header';
+import List from './src/components/List';
+import Tag from './src/components/Tag';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Hack Gang</Text>
-      </View>
-    );
-  }
-}
+const App = () => (
+	<View style={{ flex: 1 }}>
+		<Header headerText={'Open World'} />
+		<List />
+		<Tag tagArray={['Basketball', 'Soccer', 'Tennis']} />
+	</View>
+);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// Render it to the device
+export default App;
