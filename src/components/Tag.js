@@ -1,41 +1,49 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import Button from './Button';
+import { View, Text } from 'react-native';
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
 
 //Takes in an array of Tag strings as prop
 class Tags extends Component {
-
-	/*createTag(tag) {
-		return (
-			<Button>
-				{tag}
-			</Button>
-		);
-	}*/
-
-	/*createAllTags() {
-		this.props.tagArray.forEach((tag) => {
-			this.createTag(tag);
-		});
-	}*/
-
+	
 	createAllTags() {
 		return this.props.tagArray.map(function (tag, i) {
-			return (
-				<Button key={i}>
-					{tag}
-				</Button>
-			);
+			console.log(tag[0]);
+			let icon = '';
+			const name = tag[0];
+			icon += tag[2];
+			if (tag[1] === 'Ionicons') {
+				return (
+					<View key={i} style={styles.tagStyle} >
+						<Ionicons name={icon} size={40} color="blue" />
+						<Text>{name}</Text>
+					</View>
+				);
+			} else if (tag[1] === 'FontAwesome') {
+				return (
+					<View key={i} style={styles.tagStyle} >
+						<FontAwesome name={icon} size={40} color="blue" />
+						<Text>{name}</Text>
+					</View>
+				);
+			}
 		});
 	}
 
 	render() {
 		return (
-			<View style={{ display: 'flex', flexDirection: 'row', flex: 1}}>
+			<View style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
 				{this.createAllTags()}
 			</View>
 		);
 	}
 }
+
+const styles = {
+	tagStyle: {
+		flex: 1,
+		alignItems: 'center',
+		paddingTop: 20
+	}
+};
 
 export default Tags;

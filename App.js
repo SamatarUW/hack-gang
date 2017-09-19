@@ -8,7 +8,13 @@ const App = () => (
 	<View style={{ flex: 1 }}>
 		<Header headerText={'Open World'} />
 		<List />
-		<Tag tagArray={['Basketball', 'Soccer', 'Tennis']} />
+		<Tag 
+			tagArray={	
+				[['Basketball', 'Ionicons', 'ios-basketball'], 
+				['Soccer', 'FontAwesome', 'soccer-ball-o'], 
+				['Tennis', 'Ionicons', 'ios-tennisball']]
+			} 
+		/>
 	</View>
 );
 
