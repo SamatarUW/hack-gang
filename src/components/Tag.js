@@ -14,14 +14,14 @@ class Tags extends Component {
 			if (tag[1] === 'Ionicons') {
 				return (
 					<View key={i} style={styles.tagStyle} >
-						<Ionicons name={icon} size={40} color="blue" />
+						<Ionicons name={icon} size={40} color="#28A2FE" />
 						<Text>{name}</Text>
 					</View>
 				);
 			} else if (tag[1] === 'FontAwesome') {
 				return (
 					<View key={i} style={styles.tagStyle} >
-						<FontAwesome name={icon} size={40} color="blue" />
+						<FontAwesome name={icon} size={40} color="#28A2FE" />
 						<Text>{name}</Text>
 					</View>
 				);
@@ -31,7 +31,7 @@ class Tags extends Component {
 
 	render() {
 		return (
-			<View style={{ display: 'flex', flexDirection: 'row', flex: 1 }}>
+			<View style={styles.displayStyle}>
 				{this.createAllTags()}
 			</View>
 		);
@@ -43,6 +43,12 @@ const styles = {
 		flex: 1,
 		alignItems: 'center',
 		paddingTop: 20
+	},
+	displayStyle: {
+		display: 'flex',
+		flexDirection: 'row',
+		flex: 1,
+		alignItems: 'stretch'
 	}
 };
 
